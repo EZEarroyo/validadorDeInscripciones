@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Inscripcion{
+    - Alumno alumno;
+    - List<Materia> materiasInscripcion;
+    Boolean aprobada()
+    void agregarMateriasALaInscripcion(Materia ... materias)
+}
+class Alumno{
+    -String nombre;
+    -List<Materia> materiasAprobadas;
+    Boolean materiaAprobada(Materia materia)
+    void agregarMateriasAprobadas(Materia ... materias)
+}
+class Materia{
+    - String nombre;
+    - List<Materia> correlativas;
+    Boolean cumpleCorrelativas(Alumno alumno)
+    void agregarCorrelativas(Materia ... materias)
+}
+
+Materia <-- Materia
+Alumno o-- Materia
+Alumno *-- Inscripcion
+Materia *-- Inscripcion
+
+
+@enduml

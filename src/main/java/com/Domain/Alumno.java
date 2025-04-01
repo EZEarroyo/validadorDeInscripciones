@@ -1,4 +1,4 @@
-package com.AdondeVamos;
+package com.Domain;
 
 
 import lombok.Getter;

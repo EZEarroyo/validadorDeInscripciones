@@ -1,4 +1,4 @@
-package com.AdondeVamos;
+package com.Domain;
 
 public class Main {
     public static void main(String[] args) {
